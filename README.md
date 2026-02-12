@@ -1,5 +1,3 @@
-Here is a Quick Start Guide for the FORT CLI V2, based on the workflows provided.
-
 # FORT CLI V2
 
 The **FORT CLI V2** is a command-line interface tool designed to help you manage, configure, and update your FORT Robotics devices. This tool allows you to easily discover connected hardware, ensure your device configurations are up to date, and manage firmware versions directly from your terminal.  Device actions are synced back to FORT Manager.
