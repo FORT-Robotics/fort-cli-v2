@@ -2,7 +2,43 @@
 
 The **FORT CLI V2** is a command-line interface tool designed to help you manage, configure, and update your FORT Robotics devices. This tool allows you to easily discover connected hardware, ensure your device configurations are up to date, and manage firmware versions directly from your terminal.  Device actions are synced back to FORT Manager.
 
-## 1. Discovering Devices
+
+## 1. Logging In
+
+Option A: **API Key**
+
+You can create an API get in FORT Manager if you have an active subscription.
+
+
+```bash
+fortcli login --api-key zpka_my_api_key
+```
+
+Option B: **Interactive Login**
+
+This will provide a URL and a unique code to authorize your device via a web browser.
+
+```bash
+fortcli login --interactive
+```
+
+Example Output:
+```bash
+ To authorize this device, open the following URL and follow the instructions:
+ https://auth.fortrobotics.com/activate?user_code=USER_CODE
+ If prompted, enter the user code: USER_CODE
+ Authorization URL: https://auth.fortrobotics.com/activate
+```
+
+**Logging Out**
+
+To clear your credentials and end the session:
+```bash
+fortcli logout
+```
+
+
+## 2. Discovering Devices
 
 Before performing updates, verify that your FORT device is connected and recognized by the system.
 
@@ -41,7 +77,7 @@ The device lise can also be outputted as a JSON object.
 
 ---
 
-## 2. Managing Configuration
+## 3. Managing Configuration
 
 You can update your device configuration automatically or manually download and apply files.
 
@@ -73,7 +109,7 @@ Apply the downloaded file to the device.
 
 ---
 
-## 3. Managing Firmware
+## 4. Managing Firmware
 
 Keep your device running efficiently by ensuring it is on the latest firmware.
 
